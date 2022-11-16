@@ -1,0 +1,75 @@
+/* QUADRANT */
+p {
+  font-family: Lato;
+  display: block;
+}
+
+div,
+p {
+  padding: 0;
+  margin: 0;
+}
+
+.quadrant {
+  width: 90%;
+  max-width: calc(37.5rem + 6rem);
+  height: 20rem;
+  background-color: red;
+  position: relative;
+  display: grid;
+  grid-template-areas: 'origin x' 'y content';
+  grid-template-columns: 6rem calc(100% - 6rem);
+  grid-template-rows: 2rem calc(100% - 2rem);
+}
+
+.origin {
+  width: 6rem;
+  background-color: brown;
+  grid-area: origin;
+}
+
+.axis-x {
+  background-color: lightblue;
+  grid-area: x;
+  position: relative;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+.axis-y {
+  background-color: pink;
+  width: 6rem;
+  grid-area: y;
+}
+
+.content {
+  background-color: gray;
+  width: 100%;
+  height: 100%;
+  grid-area: content;
+}
+
+.axis-x p {
+  position: absolute;
+  width: 37.5rem; /* tiene que renderizar el tamaño total*/
+  right: 0;
+  bottom: 0.4rem;
+}
+
+.content .item {
+  width: 100%;
+  height: 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.content .item p {
+  position: absolute;
+  width: 37.5rem; /* tiene que renderizar el tamaño total*/
+  right: 0;
+  bottom: 0.4rem;
+}
+
+/* LEGEND */
+.legend {
+}
